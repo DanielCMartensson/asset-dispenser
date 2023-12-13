@@ -1,10 +1,22 @@
 import React from 'react'
+import { NavLink } from 'react-router-dom'
+import "./Navbar.css"
 
 const Navbar = () => {
   return (
-    <div>
-      Navbar
-    </div>
+    <nav>
+      <ul>
+        <li>
+          <NavLink to={"/"}>Start</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/secondpage"}>How to/information/about</NavLink>
+        </li>
+        <li>
+          <NavLink to={"/thirdpage"}> Legal aspects</NavLink>
+        </li>
+      </ul>
+    </nav>
   )
 }
 
