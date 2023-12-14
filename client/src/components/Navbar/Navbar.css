@@ -1,5 +1,11 @@
 nav {
+  display: flex;
+  background: #608da8;
+  height: 80px;
   width: 100%;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid whitesmoke;
 }
 nav ul {
   display: flex;
@@ -7,5 +13,15 @@ nav ul {
   padding: 0;
   margin: 0;
   gap: 15px;
-  justify-content: center;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  border-bottom: 1px solid rgba(0,0,0,0);
+  transition: border 0.25s;
+}
+
+nav ul li a.active{
+  border-bottom: 1px solid rgba(0,0,0,1);
 }

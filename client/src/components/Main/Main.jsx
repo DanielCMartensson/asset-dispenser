@@ -1,6 +1,5 @@
 import React from 'react'
 import './Main.css';
-import Navbar from '../Navbar/Navbar'
 
 const Main = () => {
   return (

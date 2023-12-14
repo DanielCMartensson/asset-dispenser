@@ -10,10 +10,10 @@ const Navbar = () => {
           <NavLink to={"/"}>Start</NavLink>
         </li>
         <li>
-          <NavLink to={"/secondpage"}>How to/information/about</NavLink>
+          <NavLink to={"/minting"}>Minting</NavLink>
         </li>
         <li>
-          <NavLink to={"/thirdpage"}> Legal aspects</NavLink>
+          <NavLink to={"/legal"}> Legal aspects</NavLink>
         </li>
       </ul>
     </nav>
