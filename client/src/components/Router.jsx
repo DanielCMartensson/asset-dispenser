@@ -3,6 +3,7 @@ import Layout from './Layout/Layout';
 import App from '../App';
 import Legal from './Legal/Legal';
 import Minting from './Minting/Minting';
+import About from './About/About';
 
 export const router = createBrowserRouter([
   {
@@ -12,6 +13,11 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <App/>,
+        index: true,
+      },
+      {
+        path: "/about",
+        element: <About/>,
         index: true,
       },
       {

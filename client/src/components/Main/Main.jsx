@@ -1,29 +1,29 @@
 import React from 'react'
 import './Main.css';
+import mystical from "../../assets/mystical.jpg"
 
 const Main = () => {
   return (
-    <section className='main-section'>
-      <div className="main-container">    
-      <section className='about_box'>
-         <h2>        
-        About the project
-        </h2>      
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi quibusdam sequi aliquam atque officiis nemo, alias eos, ipsa in quaerat deserunt odit repellat ea a vitae voluptates molestiae itaque cumque!</p>
-        </section>  
-        
-        <section className='why_box'>
-          <h2>Why web 3?</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit repellendus minima aliquam autem aperiam quam dicta hic explicabo, repellat sint, corrupti reiciendis beatae quaerat iure optio rerum incidunt ducimus quis.</p>
-        </section>
-        <section className='how_box'>
-          <h2>
-            How to proceed?
-          </h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, cupiditate eveniet nostrum placeat dolor sint totam laboriosam dicta odio vitae soluta doloribus ratione libero eos doloremque provident assumenda perferendis tempora!</p>
-        </section>
+    <>
+    <section className='main-section' >
+      <div className="main-container" >    
+      <div className="fancy-question">
+        <p>Ready to bring your company to web 3?</p>
+      </div>        
+
+      <div className="main-header">
+        <h1>Escape centralized data and join the future.</h1>  
+      </div>
+      <p>The asset dispenser is an easy way forour company to take part of the future. We help you to get into web 3 in an easy manner.</p>
       </div>
     </section>
+
+    <section className='examples-page'>
+    <div>
+      <p>HIBER IFRAME!!</p>
+    </div>
+    </section>
+    </>
   )
 }
 

@@ -1,33 +1,56 @@
-.main-section {  
+.main-section {    
   padding: 5px;
-  height: 85vh; 
+  height: 100vh; 
+  color: white;
   background: rgb(25, 31, 31);   
   background: linear-gradient(0deg, rgba(25, 31, 31, 1) 0%, rgba(96, 141, 168, 1) 100%);
+  background-image: url("../../../src/assets/mystical.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  //transform: rotate(180deg)
+
 }
 
-h2 {
+.examples-page {
+    padding: 5px;
+      height: 100vh;
+      color: white;
+      background: rgb(25, 31, 31);
+
+    /* Iframe for Hiber */
+
+}
+
+p {
+  font-size: 22px;
+}
+
+h1 {
   display: flex;
   justify-content: center;
+  font-size: 62px;
 }
 
 .main-container {
   display: flex;
+  margin: 100px;
+  margin-top: 200px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   padding: 5px;
-  margin: 50px;
-  border: 1px solid black
+  max-width: 800px;
+  
 }
+ .fancy-question{
+  display: flex;
+  position: relative;
+  justify-content: left;
+  align-items: flex-start;
+ }
 
-.about_box {
-  min-height: 20vh;
-}
-
-.why_box {
-    min-height: 20vh;
-}
-
-.how_box {
-  min-height: 20vh;
-}
+ .main-header {
+    display: flex;
+      position: relative;
+      justify-content: left;
+      align-items: flex-start;
+ }

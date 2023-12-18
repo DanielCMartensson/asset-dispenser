@@ -1,0 +1,33 @@
+.about-section {
+  padding: 5px;
+  height: 85vh;
+  background: rgb(25, 31, 31);
+  background: linear-gradient(0deg, rgba(25, 31, 31, 1) 0%, rgba(96, 141, 168, 1) 100%);
+}
+
+h2 {
+  display: flex;
+  justify-content: center;
+}
+
+.about-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin: 50px;
+  border: 1px solid black
+}
+
+.about_box {
+  min-height: 20vh;
+}
+
+.why_box {
+  min-height: 20vh;
+}
+
+.how_box {
+  min-height: 20vh;
+}

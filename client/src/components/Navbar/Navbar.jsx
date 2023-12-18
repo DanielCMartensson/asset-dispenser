@@ -7,13 +7,15 @@ const Navbar = () => {
   return (    
   <>
       <div className='logo'>
-        <img src={logo} alt="logo" />
+        <a href="/">
+        <img src={logo} alt="logo" width="130px" height="auto" />
+        </a>
       </div>
     <nav>
       <ul>        
         <li>
           <span class="gradient-text">
-          <NavLink to={"/"}>Start</NavLink>
+          <NavLink to={"/about"}>About</NavLink>
           </span>
         </li>
         <li>
