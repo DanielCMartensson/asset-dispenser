@@ -1,5 +1,10 @@
 .legal-section {
-  min-height: 80vh;
-  background: rgb(25, 31, 31);
-  background: linear-gradient(0deg, rgba(25, 31, 31, 1) 0%, rgba(96, 141, 168, 1) 100%);
+  padding: 5px;
+    height: 85vh;
+    background: rgb(25, 31, 31);
+    background: linear-gradient(0deg, rgba(25, 31, 31, 1) 0%, rgba(96, 141, 168, 1) 100%);
+}
+
+.legal-container {
+  min-height: 60vh;
 }
