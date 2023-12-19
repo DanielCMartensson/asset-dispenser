@@ -31,6 +31,9 @@ const Main = () => {
         </p>
        </div>
     </section>
+    <div className='btn_box'>
+        <button className='start_button'>LET'S GET STARTED!</button>
+    </div>
     </>
   )
 }

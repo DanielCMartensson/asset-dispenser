@@ -30,7 +30,6 @@
 
 .text_box {
   display: flex;
-  border: 2px solid white;
   background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   border-radius: 10px;
   max-width: 600px;
@@ -71,4 +70,25 @@ h1 {
       position: relative;
       justify-content: left;
       align-items: flex-start;
+ }
+
+ .btn_box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10vh;
+  background: rgb(161, 182, 182);
+ }
+
+ .start_button {
+  display: flex;
+  margin-bottom: 300px;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 10px;
+  height: 80px;
+  width: 250px;
+  background: linear-gradient(0deg, rgb(170, 55, 32) 0%, rgb(202, 7, 7) 100%);
  }
