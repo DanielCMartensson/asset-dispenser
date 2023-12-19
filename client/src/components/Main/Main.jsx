@@ -1,6 +1,7 @@
 import React from 'react'
 import './Main.css';
-import mystical from "../../assets/mystical.jpg"
+import camping from "../../assets/camping.png"
+import device from "../../assets/device.png"
 
 const Main = () => {
   return (
@@ -19,9 +20,16 @@ const Main = () => {
     </section>
 
     <section className='examples-page'>
-    <div>
-      <p>HIBER IFRAME!!</p>
+    <div className='text_box'>
+      <p>Unlesh the potential of in game assets that live on the blockchain, backed by a strong community</p>
     </div>
+    <div><img src={camping} alt="picture" height={600}/></div>
+    <div><img src={device} alt="picture" height={500}/></div>
+      <div className='text_box'>
+        <p>
+       Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, iure excepturi dolor esse sed mollitia nulla adipisci est ducimus officiis. Perferendis asperiores vitae, ipsa accusamus quibusdam aliquid ullam non et. 
+        </p>
+       </div>
     </section>
     </>
   )
