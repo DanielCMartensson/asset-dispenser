@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Minting.css"
+import "../Styles/Minting.css"
 
 const Minting = () => {
   return (

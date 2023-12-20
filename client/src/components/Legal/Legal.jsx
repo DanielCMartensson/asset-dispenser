@@ -1,5 +1,5 @@
 import React from 'react'
-import "./Legal.css"
+import "../Styles/Legal.css"
 
 const Legal = () => {
   return (

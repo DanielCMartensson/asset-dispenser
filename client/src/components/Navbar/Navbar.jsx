@@ -1,6 +1,6 @@
 import React from 'react'
 import { NavLink } from 'react-router-dom'
-import "./Navbar.css"
+import "../Styles/Navbar.css"
 import logo from "../../assets/logo.png"
 
 const Navbar = () => {
@@ -14,17 +14,17 @@ const Navbar = () => {
     <nav>
       <ul>        
         <li>
-          <span class="gradient-text">
+          <span className="gradient-text">
           <NavLink to={"/about"}>About</NavLink>
           </span>
         </li>
         <li>
-          <span class="gradient-text">
+          <span className="gradient-text">
           <NavLink to={"/minting"}>Minting</NavLink>
           </span>
         </li>
         <li>
-          <span class="gradient-text">
+          <span className="gradient-text">
           <NavLink to={"/legal"}> Legal aspects</NavLink>
           </span>
         </li>

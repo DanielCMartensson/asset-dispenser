@@ -1,9 +1,11 @@
 import React from 'react'
-import './Main.css';
+import '../Styles/Main.css';
 import camping from "../../assets/camping.png"
 import device from "../../assets/device.png"
+import { Link } from 'react-router-dom';
 
 const Main = () => {
+
   return (
     <>
     <section className='main-section' >
@@ -23,16 +25,16 @@ const Main = () => {
     <div className='text_box'>
       <p>Unlesh the potential of in game assets that live on the blockchain, backed by a strong community</p>
     </div>
-    <div><img src={camping} alt="picture" height={600}/></div>
-    <div><img src={device} alt="picture" height={500}/></div>
+    <div><img src={camping} alt="camping" height={600}/></div>
+    <div><img src={device} alt="gamepad" height={500}/></div>
       <div className='text_box'>
         <p>
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, iure excepturi dolor esse sed mollitia nulla adipisci est ducimus officiis. Perferendis asperiores vitae, ipsa accusamus quibusdam aliquid ullam non et. 
         </p>
        </div>
     </section>
-    <div className='btn_box'>
-        <button className='start_button'>LET'S GET STARTED!</button>
+    <div className='start_minting'>
+        <Link to="/minting" className="cta_btn">LET'S GET STARTED!</Link>
     </div>
     </>
   )

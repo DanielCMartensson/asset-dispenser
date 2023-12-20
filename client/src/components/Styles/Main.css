@@ -23,6 +23,7 @@
   background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   align-items: center;
   justify-content: center;
+  padding-bottom: 0;
 
     /* Iframe for Hiber */
 
@@ -72,23 +73,30 @@ h1 {
       align-items: flex-start;
  }
 
- .btn_box {
+ .start_minting {
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100%;
-  height: 10vh;
+  align-items: top;
   background: rgb(161, 182, 182);
+  height: 100px;
  }
 
- .start_button {
-  display: flex;
-  margin-bottom: 300px;
-  justify-content: center;
-  align-items: center;
-  border: 2px solid black;
-  border-radius: 10px;
-  height: 80px;
-  width: 250px;
-  background: linear-gradient(0deg, rgb(170, 55, 32) 0%, rgb(202, 7, 7) 100%);
+ .cta_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 24px;
+    font-weight: 600;
+
+    color: black;
+    background: rgb(27, 87, 125);
+
+    border-radius: 15px;
+    padding: 5px 15px;
+    box-shadow: 0px 2px 2px lightgray;
+
+    margin-bottom: 10px;
  }

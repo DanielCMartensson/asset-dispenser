@@ -17,13 +17,10 @@ nav ul {
 
 nav ul li a {
   text-decoration: none;
-  border-bottom: 1px solid rgba(0,0,0,0);
-  transition: border 0.25s;
 }
 
 nav ul li a.active{
   font-style: italic;
-  /* border-bottom: 1px solid rgb(255, 255, 255); */
 }
 
 .gradient-text {
