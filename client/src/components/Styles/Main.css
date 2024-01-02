@@ -15,15 +15,16 @@
 .examples-page {
   display: grid;
   grid-template-columns: 40% 40% ;
-  grid-template-rows: 40% 40%;
-  row-gap: 40px;
+  grid-template-rows: 45% 45%;
+  row-gap: 80px;
+  column-gap: 20px;
   padding: 60px;
   height: 100vh;
   color: white;
+  background: (0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   align-items: center;
   justify-content: center;
-  padding-bottom: 0;
 
     /* Iframe for Hiber */
 
@@ -32,11 +33,18 @@
 .text_box {
   display: flex;
   background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
-  border-radius: 10px;
-  max-width: 600px;
+  border-radius: 20px;
+  min-width: 300px;
+  width: 400px;
   min-height: 400px;
   align-items: center;
   justify-content: center;
+  padding-left: 10px;
+}
+
+.nft_box_right {
+  padding-top: 50px;
+  padding-left: 10px;
 }
 
 p {
@@ -76,9 +84,9 @@ h1 {
  .start_minting {
   display: flex;
   justify-content: center;
-  align-items: top;
   background: rgb(161, 182, 182);
   height: 100px;
+  padding-bottom: 60px ;
  }
 
  .cta_btn {
@@ -96,7 +104,12 @@ h1 {
 
     border-radius: 15px;
     padding: 5px 15px;
-    box-shadow: 0px 2px 2px lightgray;
 
     margin-bottom: 10px;
+ }
+
+ @media only screen and (max-width: 480px) {
+    .text_box {
+        display: block;
+    }
  }
