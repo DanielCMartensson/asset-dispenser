@@ -1,18 +1,18 @@
 require("@nomicfoundation/hardhat-toolbox");
-require('.env').config();
+const dotenv = require("dotenv");
 
-import {config as dotenv} from 'dotenv'
-
-dotenv({path: '../config/config.env'})
-const {ALCHEMY_TESTNET_RPC_URL, TESTNET_PRIVATE_KEY } = process.env
+dotenv.config();
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.20",
-  networks:{ 
+  networks: {
     mumbai: {
-      url: ALCHEMY_TESTNET_RPC_URL,
-      accounts: [TESTNET_PRIVATE_KEY],
+      url: process.env.ALCHEMY_TESTNET_RPC_URL,
+      accounts: [process.env.TESTNET_PRIVATEKEY],
     },
-  },    
+  },
+  polygonscan: {
+    apiKey: process.env.POLYGONSCAN_API_KEY
+  },
 };

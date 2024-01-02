@@ -5,6 +5,8 @@ import device from "../../assets/device.png"
 import { Link } from 'react-router-dom';
 
 const Main = () => {
+  console.log("Main");
+
 
   return (
     <>
@@ -34,7 +36,7 @@ const Main = () => {
        </div>
     </section>
     <div className='start_minting'>
-        <Link to="/minting" className="cta_btn">LET'S GET STARTED!</Link>
+        <Link to="/minting" className="cta_btn" >LET'S GET STARTED!</Link>
     </div>
     </>
   )

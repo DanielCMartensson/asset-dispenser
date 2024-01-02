@@ -5,9 +5,10 @@ import Navbar from '../Navbar/Navbar'
 import Footer from '../Footer/Footer'
 
 const Layout = () => {
+
   return (
     <>
-      <header className='wrapper'><Navbar/></header>
+      <header className='wrapper'><Navbar /></header>
       <Outlet/>
       <footer className='wrapper'><Footer/></footer>
     </>

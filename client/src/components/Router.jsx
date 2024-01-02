@@ -6,7 +6,7 @@ import Minting from './Minting/Minting';
 import About from './About/About';
 
 export const router = createBrowserRouter([
-  {
+  {   
     path: "/",
     element: <Layout />,
     children: [

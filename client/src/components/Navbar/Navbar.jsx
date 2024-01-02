@@ -4,6 +4,7 @@ import "../Styles/Navbar.css"
 import logo from "../../assets/logo.png"
 
 const Navbar = () => {
+
   return (    
   <>
       <div className='logo'>
@@ -29,6 +30,7 @@ const Navbar = () => {
           </span>
         </li>
       </ul>
+
     </nav>
     </>
   )
