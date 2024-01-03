@@ -14,16 +14,17 @@
 
 .examples-page {
   display: grid;
+  padding-left: 10%;
+  padding-right: 10%;
   grid-template-columns: 40% 40% ;
   grid-template-rows: 45% 45%;
   row-gap: 80px;
   column-gap: 20px;
-  padding: 60px;
   height: 100vh;
   color: white;
-  background: (0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   align-items: center;
+  align-content: space-around;
   justify-content: center;
 
     /* Iframe for Hiber */
@@ -42,7 +43,23 @@
   padding-left: 10px;
 }
 
+.text_box_right {
+  display: flex;
+  background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
+  border-radius: 20px;
+  min-width: 300px;
+  width: 400px;
+  min-height: 400px;
+  align-items: center;
+  justify-content: center;
+  padding-left: 10px;
+  margin-left: auto;
+}
+
 .nft_box_right {
+  display: flex;
+  overflow: hidden;
+  margin-left: auto;
   padding-top: 50px;
   padding-left: 10px;
 }

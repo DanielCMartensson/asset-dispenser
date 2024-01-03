@@ -8,6 +8,7 @@ const Minting = () => {
   const mintingAddress = "";
   const [mintAmount, setMintAmount] = useState(1);
   const [accounts, setAccounts] = useState([]);
+  const isConnected = Boolean(accounts[0]);
 
   async function connectAccount() {
     if(window.ethereum) {
@@ -17,9 +18,6 @@ const Minting = () => {
       setAccounts(accounts);
     }
   }
-
-  const isConnected = Boolean(accounts[0]);
-
 
   async function handleMint(){
     if (window.ethereum) {
@@ -31,7 +29,9 @@ const Minting = () => {
         signer
       );
       try {
-        const response = await contract.mint(BigNumber.from(mintAmount));
+        const response = await contract.mint(BigNumber.from(mintAmount), {
+          value: ethers.utils.parseEther((0.02*mintAmount).toString()) 
+        });
         console.log("response: ", response);
       } catch (err) {
         console.log("error: ", err)
@@ -41,7 +41,7 @@ const Minting = () => {
 
   const handleDecrement = () => {
     if (mintAmount <= 1) return;
-    setMintAmount(mintAmount -1);
+    setMintAmount(mintAmount - 1);
   }
 
   const handleIncrement = () => {
@@ -58,13 +58,13 @@ const Minting = () => {
         <div>
           <div>
             <button onClick={handleDecrement}>-</button>
-            <input type='number' value={{mintAmount}}></input>
+            <input type='number' value={mintAmount}></input>
             <button onClick={handleIncrement}>+</button>
           </div>
           <button onClick={handleMint}>Mint Now</button>
         </div>
       ) : (
-        <p>You must be connected to mint</p>
+        <p>Please connect your wallet to mint</p>
       )}
       <div>
         {isConnected ? (

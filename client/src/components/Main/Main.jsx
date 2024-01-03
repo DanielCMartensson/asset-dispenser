@@ -27,9 +27,9 @@ const Main = () => {
     <div className='text_box'>
       <p>Unlesh the potential of in game assets that live on the blockchain, backed by a strong community</p>
     </div>
-    <div><img src={camping} alt="camping" height={600}/></div>
+    <div className='nft_box_right' ><img src={camping} alt="camping" height={500}/></div>
     <div><img src={device} alt="gamepad" height={500}/></div>
-      <div className='text_box'>
+      <div className='text_box_right'>
         <p>
        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, iure excepturi dolor esse sed mollitia nulla adipisci est ducimus officiis. Perferendis asperiores vitae, ipsa accusamus quibusdam aliquid ullam non et. 
         </p>
