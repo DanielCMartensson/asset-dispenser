@@ -50,31 +50,47 @@ const Minting = () => {
   }
 
   return (
+    <>
     <section className="minting-section">
       <div className="main-container">
-      <h1>Lets get to minting</h1>
-      <p>Try to mint...</p>
-      {isConnected ? (
-        <div>
-          <div>
-            <button onClick={handleDecrement}>-</button>
-            <input type='number' value={mintAmount}></input>
-            <button onClick={handleIncrement}>+</button>
-          </div>
-          <button onClick={handleMint}>Mint Now</button>
+        <div className='info_box'>
+          <h1>Lets get to minting</h1>
+          <p>Try to mint...</p>
         </div>
-      ) : (
-        <p>Please connect your wallet to mint</p>
-      )}
-      <div>
         {isConnected ? (
-          <p>Connected</p>
-        ) : (
-          <button onClick={connectAccount}>Connect</button>
-        )}
+          <div className='minting_options'>
+            <div>
+              <button className='decrement_btn' onClick={handleDecrement}>-</button>
+              <input className='amount_input' type='number' readOnly value={mintAmount}></input>
+              <button className='decrement_btn' onClick={handleIncrement}>+</button>
+            </div>
+            <button className='opt_btn' onClick={handleMint}>Mint Now</button>
+          </div>
+        ) 
+        : (<p></p>)
+        }
       </div>
+      <div className='Info_container'>
+        <div>
+        <h2> Info about whats happening</h2>
+        <p>lalala</p>
+        </div>
       </div>
     </section>
+    <section className='connect_wrapper'>
+      <div className='connect_box'>
+        {isConnected ? (<>
+          <h2>Connected with account: </h2> <p>{accounts[0]}</p>
+        </>
+          ) : (
+          <>
+          <h2>Please connect your wallet to mint</h2>
+          <button className='opt_btn' onClick={connectAccount}>Connect</button>
+          </>
+        )}
+      </div>
+    </section>
+    </>
   )
 }
 
