@@ -1,9 +1,8 @@
 const hre = require("hardhat");
-initialOwner = "0x64686b3BaCd681225d2b7B777C2f1fcdD2CC698C"
 
 async function main() {
   const GameNft = await hre.ethers.getContractFactory("GameNft");
-  const gameNft = await GameNft.deploy(initialOwner);
+  const gameNft = await GameNft.deploy("0x64686b3BaCd681225d2b7B777C2f1fcdD2CC698C");
 
   await gameNft.waitForDeployment();
 

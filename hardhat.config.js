@@ -1,4 +1,5 @@
 require("@nomicfoundation/hardhat-toolbox");
+require("@nomicfoundation/hardhat-verify");
 require("dotenv").config();
 
 const {ALCHEMY_TESTNET_RPC_URL, TESTNET_PRIVATEKEY, POLYGONSCAN_API_KEY} = process.env;
