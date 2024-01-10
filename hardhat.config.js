@@ -1,16 +1,17 @@
-require("@nomicfoundation/hardhat-toolbox");
-require("@nomiclabs/hardhat-ethers");
-const dotenv = require("dotenv");
-dotenv.config();
-
 /** @type import('hardhat/config').HardhatUserConfig */
+
+require("@nomicfoundation/hardhat-toolbox");
+require("dotenv").config();
+
+const {ALCHEMY_TESTNET_RPC_URL, TESTNET_PRIVATEKEY} = process.env;
+
 module.exports = {
   solidity: "0.8.20",
   defaultNetwork: "polygon_mumbai",
   networks: {
     polygon_mumbai: {
-      url: process.env.ALCHEMY_TESTNET_RPC_URL,
-      accounts: [process.env.TESTNET_PRIVATEKEY],
+      url: ALCHEMY_TESTNET_RPC_URL,
+      accounts: [TESTNET_PRIVATEKEY],
     },
   },
   etherscan: {

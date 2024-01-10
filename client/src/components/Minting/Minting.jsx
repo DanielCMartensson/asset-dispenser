@@ -51,14 +51,23 @@ const Minting = () => {
 
   return (
     <>
-    <section className="minting-section">
-      <div className="main-container">
-        <div className='info_box'>
-          <h1>Lets get to minting</h1>
-          <p>Try to mint...</p>
+    <section className="minting-section">    
+      <div className="minting-container">
+      {isConnected ? (
+        <div className='info_box_connected'>
         </div>
+      ): (
+        <div className='info_box'>
+          <h1>How to get started</h1>
+          <p>In order to get started you need to connect your wallet. I doing so allows us to check wether or not you are eligable for any mint. </p>
+        </div>
+      )}
         {isConnected ? (
           <div className='minting_options'>
+            <div className='info_container'>
+                <h2> What are we minting?</h2>
+                <p>Your wallet address is eligable to mint the collection</p>
+            </div>
             <div>
               <button className='decrement_btn' onClick={handleDecrement}>-</button>
               <input className='amount_input' type='number' readOnly value={mintAmount}></input>
@@ -67,15 +76,10 @@ const Minting = () => {
             <button className='opt_btn' onClick={handleMint}>Mint Now</button>
           </div>
         ) 
-        : (<p></p>)
+        : (<></>)
         }
       </div>
-      <div className='Info_container'>
-        <div>
-        <h2> Info about whats happening</h2>
-        <p>lalala</p>
-        </div>
-      </div>
+
     </section>
     <section className='connect_wrapper'>
       <div className='connect_box'>

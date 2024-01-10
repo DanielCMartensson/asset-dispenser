@@ -7,12 +7,13 @@ const Navbar = () => {
 
   return (    
   <>
+    <nav>
       <div className='logo'>
         <a href="/">
         <img src={logo} alt="logo" width="130px" height="auto" />
         </a>
       </div>
-    <nav>
+      
       <ul>        
         <li>
           <span className="gradient-text">

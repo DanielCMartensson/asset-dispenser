@@ -19,13 +19,13 @@ const Main = () => {
       <div className="main-header">
         <h1>Escape centralized data and join the future.</h1>  
       </div>
-      <p>The asset dispenser is an easy way forour company to take part of the future. We help you to get into web 3 in an easy manner.</p>
+      <p>The asset dispenser is an easy way fory our company to take part of the future. We help you to get into web 3 in an easy manner.</p>
       </div>
     </section>
 
     <section className='examples-page'>
     <div className='text_box'>
-      <p>Unlesh the potential of in game assets that live on the blockchain, backed by a strong community</p>
+      <p>Unleash the potential of in-game assets that live on the blockchain, backed by a strong community</p>
     </div>
     <div className='nft_box_right' ><img src={camping} alt="camping" height={500}/></div>
     <div><img src={device} alt="gamepad" height={500}/></div>
