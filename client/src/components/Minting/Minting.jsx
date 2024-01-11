@@ -2,10 +2,11 @@ import {useState} from 'react';
 import { ethers, BigNumber } from 'ethers';
 import React from 'react'
 import "../Styles/Minting.css"
-import NftMinting from '../../NftMinting.json';
+import GameNft from '../../GameNft.json';
+
+const GameNftAddress = "0x180B68507CB960a3314141F174B0dd71b5a8DA97";
 
 const Minting = () => {
-  const mintingAddress = "";
   const [mintAmount, setMintAmount] = useState(1);
   const [accounts, setAccounts] = useState([]);
   const isConnected = Boolean(accounts[0]);
@@ -24,13 +25,13 @@ const Minting = () => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
-        mintingAddress,
-        NftMinting.abi,
+        GameNftAddress,
+        GameNft.abi,
         signer
       );
       try {
-        const response = await contract.mint(BigNumber.from(mintAmount), {
-          value: ethers.utils.parseEther((0.02*mintAmount).toString()) 
+        const response = await contract.publicMint(BigNumber.from(mintAmount), {
+          value: ethers.utils.parseEther((0*mintAmount).toString()) 
         });
         console.log("response: ", response);
       } catch (err) {
