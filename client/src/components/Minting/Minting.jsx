@@ -35,15 +35,27 @@ const Minting = () => {
         GameNft.abi,
         signer
       );
-      try {
-        const response = await contract.publicMint("ipfs://QmcV9e7ujNUhW7zUWUQ8MsFcjbgtZ2F61iJC4jpqoCDrT8", BigNumber.from(mintAmount), {
-          value: ethers.utils.parseEther((0.01*mintAmount).toString())           
-        });
-        setMintSuccess(true);
-        console.log("response: ", response);
-      } catch (err) {
-        console.log("error: ", err)
-      }
+      if (isPublicMint) {
+        try {
+          const response = await contract.publicMint("ipfs://QmcV9e7ujNUhW7zUWUQ8MsFcjbgtZ2F61iJC4jpqoCDrT8", BigNumber.from(mintAmount), {
+            value: ethers.utils.parseEther((0.01*mintAmount).toString())           
+          });
+          setMintSuccess(true);
+          console.log("response: ", response);
+        } catch (err) {
+          console.log("error: ", err)
+        }
+      } else {
+          try {
+          const response = await contract.prepaidMint(BigNumber.from(mintAmount), {
+            value: ethers.utils.parseEther((0.01*mintAmount).toString())           
+          });
+          setMintSuccess(true);
+          console.log("response: ", response);
+        } catch (err) {
+          console.log("error: ", err)
+        }
+      };
     }
   }
 
@@ -87,7 +99,7 @@ const Minting = () => {
           ) : (
             <div className='info_container'>
                 <h2> Prepaid minting</h2>
-                <p> If you have been in contact with us and your wallet is prepaid, you can start minting</p>
+                <p> If you have prepaid, you can start minting</p>
                 <button className='opt_btn' onClick={handleMintOptions}>To Public Mint</button>
             </div>
           )}
