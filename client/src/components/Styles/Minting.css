@@ -67,18 +67,32 @@ p {
   padding: 30px;
 }
 
-.info_box_connected {
-  height: 40vh;
-/*   background-image: url("../../assets/sweater.png"); */
+.public_mint_box {
+  background-image: url("../../assets/beeNftee.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  height: 40vh;
   width: 600px;
   margin-top: 60px;
   margin-left: 20px;
   border-radius: 15px;
   border: 2px solid black;
 }
+
+.private_mint_box {
+  background-image: url("../../assets/kittenNft.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 40vh;
+  width: 600px;
+  margin-top: 60px;
+  margin-left: 20px;
+  border-radius: 15px;
+  border: 2px solid black;
+}
+
 .info_box {
   padding: 10px;
 }

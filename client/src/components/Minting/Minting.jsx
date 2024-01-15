@@ -9,8 +9,7 @@ const GameNftAddress = "0x180B68507CB960a3314141F174B0dd71b5a8DA97";
 const Minting = () => {
   const [mintAmount, setMintAmount] = useState(1);
   const [accounts, setAccounts] = useState([]);
-  const [isPublicMint, setPublicMint] = useState(false);
-  /* const [isPublicMintOpen, setPublicMintOpen] = useState(); */
+  const [isPublicMint, setPublicMint] = useState(true);
   const isConnected = Boolean(accounts[0]);
   const [mintSuccess, setMintSuccess] = useState(false)
 
@@ -63,7 +62,13 @@ const Minting = () => {
     <section className="minting-section">    
       <div className="minting-container">
       {isConnected ? (
-        <div className='info_box_connected'>
+        <div>
+          {isPublicMint ? (
+            <div className='public_mint_box'/>
+          ) :
+          (
+            <div className='private_mint_box'/>
+          )}
         </div>
       ): (
         <div className='info_box'>
