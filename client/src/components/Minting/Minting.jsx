@@ -10,8 +10,9 @@ const Minting = () => {
   const [mintAmount, setMintAmount] = useState(1);
   const [accounts, setAccounts] = useState([]);
   const [isPublicMint, setPublicMint] = useState(false);
-  const [isPublicMintOpen, setPublicMintOpen] = useState();
+  /* const [isPublicMintOpen, setPublicMintOpen] = useState(); */
   const isConnected = Boolean(accounts[0]);
+  const [mintSuccess, setMintSuccess] = useState(false)
 
   const handleMintOptions = () => {
     setPublicMint(!isPublicMint)
@@ -36,9 +37,10 @@ const Minting = () => {
         signer
       );
       try {
-        const response = await contract.publicMint("https://ipfs.filebase.io/ipfs/QmWUZXX79cFf93fkWwaNDi6ttrf4f2ZBPkG7DfQ4eV6uYJ", BigNumber.from(mintAmount), {
-          value: ethers.utils.parseEther((0.01*mintAmount).toString()) 
+        const response = await contract.publicMint("ipfs://QmcV9e7ujNUhW7zUWUQ8MsFcjbgtZ2F61iJC4jpqoCDrT8", BigNumber.from(mintAmount), {
+          value: ethers.utils.parseEther((0.01*mintAmount).toString())           
         });
+        setMintSuccess(true);
         console.log("response: ", response);
       } catch (err) {
         console.log("error: ", err)
@@ -93,6 +95,17 @@ const Minting = () => {
           </div>
         ) 
         : (<></>)
+        }
+      </div>
+      <div>
+        {mintSuccess ? (
+            <dialog open>
+              <h2>Congratulations, you have successfully minted</h2>
+              <form method='dialog'>
+              <button className='opt_btn'>Ok</button>
+              </form>
+            </dialog>
+        ) : <></>
         }
       </div>
 
