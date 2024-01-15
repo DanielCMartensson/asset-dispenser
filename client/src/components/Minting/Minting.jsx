@@ -59,13 +59,14 @@ const Minting = () => {
     }
   }
 
-  const handleDecrement = () => {
-    if (mintAmount <= 1) return;
-    setMintAmount(mintAmount - 1);
+  const handleDecrement = () => {    
+      if (mintAmount <= 1) return;
+      setMintAmount(mintAmount - 1);
   }
 
   const handleIncrement = () => {
-    if (mintAmount >= 3) return;
+    if (isPublicMint && mintAmount >= 3) return;
+    if (mintAmount >= 100) return;
     setMintAmount(mintAmount + 1);
   }
 
@@ -85,7 +86,7 @@ const Minting = () => {
       ): (
         <div className='info_box'>
           <h1>How to get started</h1>
-          <p>In order to get started you need to connect your wallet. I doing so allows us to check wether or not you are eligable for any mint. </p>
+          <p>In order to get started you need to connect your wallet. In doing so allows us to check wether or not you are eligable for any mint. </p>
         </div>
       )}
         {isConnected ? (
