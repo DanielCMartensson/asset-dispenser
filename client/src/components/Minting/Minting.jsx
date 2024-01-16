@@ -2,9 +2,9 @@ import {useState} from 'react';
 import { ethers, BigNumber } from 'ethers';
 import React from 'react'
 import "../Styles/Minting.css"
-import GameNft from '../../GameNft.json';
+import AssetDispenserNfts from '../../AssetDispenserNfts.json';
 
-const GameNftAddress = "0x180B68507CB960a3314141F174B0dd71b5a8DA97";
+const AssetDispenserNftsAddress = "0x1E15676604e11574e65Ec52C7A9F12eB577CB9a6";
 
 const Minting = () => {
   const [mintAmount, setMintAmount] = useState(1);
@@ -31,14 +31,14 @@ const Minting = () => {
       const provider = new ethers.providers.Web3Provider(window.ethereum);
       const signer = provider.getSigner();
       const contract = new ethers.Contract(
-        GameNftAddress,
-        GameNft.abi,
+        AssetDispenserNftsAddress,
+        AssetDispenserNfts.abi,
         signer
       );
       if (isPublicMint) {
         try {
           const response = await contract.publicMint("ipfs://QmcV9e7ujNUhW7zUWUQ8MsFcjbgtZ2F61iJC4jpqoCDrT8", BigNumber.from(mintAmount), {
-            value: ethers.utils.parseEther((0.01*mintAmount).toString())           
+            value: ethers.utils.parseEther((0.001*mintAmount).toString())           
           });
           setMintSuccess(true);
           console.log("response: ", response);
