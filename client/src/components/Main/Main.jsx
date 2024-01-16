@@ -13,26 +13,25 @@ const Main = () => {
     <section className='main-section' >
       <div className="main-container" >    
       <div className="fancy-question">
-        <p>Ready to bring your company to web 3?</p>
+        <p className='question'>Ready to bring your company to web 3?</p>
       </div>        
 
       <div className="main-header">
-        <h1>Escape centralized data and join the future.</h1>  
+        <h1 className='slogan_text'>Escape centralized data and join the future.</h1>  
       </div>
-      <p>The asset dispenser is an easy way fory our company to take part of the future. We help you to get into web 3 in an easy manner.</p>
+      <p className='added_text'>The asset dispenser is an easy way for your company to take part of the future. We help you to get into web 3 in an easy manner.</p>
       </div>
     </section>
 
     <section className='examples-page'>
-      <div className='text_box'>
-        <p>Unleash the potential of in-game assets that live on the blockchain, backed by a strong community</p>
+      <div>
+        <p className='gaming_story'>In the immersive realm of virtual gaming, a weekly challenge beckoned players to conquer with their trusty gamepads. A skilled champion emerged, clutching a unique NFT that forever encapsulated their digital victory.</p>
       </div>
-      <div className='nft_box_right' ><img src={camping} alt="camping" height={500}/></div>
-      <div><img src={device} alt="gamepad" height={500}/></div>
-        <div className='text_box_right'>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos, iure excepturi dolor esse sed mollitia nulla adipisci est ducimus officiis. Perferendis asperiores vitae, ipsa accusamus quibusdam aliquid ullam non et. 
-          </p>
+      <div ><img src={device} alt="gamepad" height={700}/></div>
+      <div ><img src={camping} alt="camping" height={660} /></div>
+        <div>
+          <p className='gaming_story'>
+In the realm of outdoor exploration, a weekly challenge prompted campers to showcase their idyllic sites. A nature enthusiast secured a unique NFT, immortalizing their serene camping spot in the digital landscape of blockchain.          </p>
         </div>
       </section>
       <div className='start_minting'>

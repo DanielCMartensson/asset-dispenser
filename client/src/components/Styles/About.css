@@ -21,6 +21,7 @@
   margin: 50px;
   box-shadow: 2px 2px 2px black;
   padding: 10px;
+  font-size: 24px;
 }
 .why_box {
   min-height: 20vh;
@@ -35,6 +36,7 @@
   margin: 50px;
   box-shadow: 2px 2px 2px black;
   padding: 10px;
+  font-size: 24px;
 }
 .how_box {
   min-height: 20vh;

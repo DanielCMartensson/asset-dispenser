@@ -85,8 +85,8 @@ const Minting = () => {
         </div>
       ): (
         <div className='info_box'>
-          <h1>How to get started</h1>
-          <p>In order to get started you need to connect your wallet. In doing so allows us to check wether or not you are eligable for any mint. </p>
+          <h1 className='get_Started_headline'>How to get started</h1>
+          <p className='connect_wallet_text'>In order to get started you need to connect your wallet. In doing so allows us to check wether or not you are eligable for any mint. </p>
         </div>
       )}
         {isConnected ? (
