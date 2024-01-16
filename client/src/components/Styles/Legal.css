@@ -18,7 +18,8 @@
   border-radius: 15px;
   margin: 50px;
   box-shadow: 2px 2px 2px black;
-  padding: 10px;
+  padding: 30px;
+  font-size: 22px;
 }
 
 .sec_box {
@@ -32,5 +33,12 @@
   border-radius: 15px;
   margin: 50px;
   box-shadow: 2px 2px 2px black;
-  padding: 10px;
+  padding: 30px;
+  font-size: 22px;
+}
+
+.legal_header {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
 }

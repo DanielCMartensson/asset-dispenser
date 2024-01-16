@@ -76,16 +76,16 @@ const Minting = () => {
     <section className='how_section'>
       <div className='steps'>
           <h2 className='step_header'>1</h2>
-          <p>select either the public minting or a prepaid minting</p>
+          <p>Select either the <b>public minting</b> or a <b>prepaid minting</b></p>
       </div>
       <div className='steps'>
           <h2 className='step_header'>2</h2>
-          <p>select the number of items. Max 3 for public minting</p>
+          <p>Select the number of items. Max 3 for public minting</p>
 
       </div>
       <div className='steps'>
           <h2 className='step_header'>3</h2>
-          <p>Press the MINT NOW button and sign the transaction</p>
+          <p>Press the <b>MINT NOW</b> button and sign the transaction</p>
 
       </div>
     </section>
