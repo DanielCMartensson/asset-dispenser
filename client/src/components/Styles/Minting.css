@@ -4,18 +4,17 @@
   justify-content: center;
   align-items: center;
   padding: 5px;
-  height: 70vh;
+  height: 60vh;
   background: rgb(25, 31, 31);
   background: linear-gradient(0deg, rgb(96, 114, 114) 0%, rgb(22, 79, 115) 70%, rgb(0, 0, 0) 100%);
-  
+  margin-bottom: 0;
 }
 .minting-container {
   background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
   border: 1px solid black;
   display: flex;
   height: 50vh;
-  max-width: 900px;
-  min-width: 750px;
+  width: 900px;
   border-radius: 15px;
   margin-right: 50px;
   box-shadow: 2px 2px 2px black;
@@ -49,9 +48,42 @@ p {
   max-width: 400px;
   height: 380px;
   border: 1px solid black;
-  background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);  border-radius: 15px;
+  background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);  
+  border-radius: 15px;
   box-shadow: 2px 2px 2px black;
   margin-bottom: 40px;
+}
+
+.how_section {
+  display: flex;
+  flex-direction: row;
+  align-items: end;
+  justify-content: center;
+  gap: 50px;
+  background-color: black;
+  height: 300px;
+}
+
+.not_connected_filler {
+  background-color: black;
+}
+
+.step_header {
+  font-size: 30px;
+  padding: 0px;
+  margin: 0px;
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 200px;
+  width: 350px;
+  border-radius: 15px;
+  background: linear-gradient(0deg, rgb(161, 182, 182) 0%, rgb(22, 79, 115) 100%);
+  font-size: 22px;
+  padding: 10px;
 }
 
 .connect_wrapper {
@@ -59,6 +91,7 @@ p {
   justify-content: center;
   align-items: center;
   background-color: rgb(96, 114, 114);
+  color: black;
   padding: 30px;
 }
 
@@ -130,6 +163,7 @@ p {
   justify-content: center;
   align-items: center;
 }
+
 .opt_btn {
   justify-content: center;
   align-items: center;

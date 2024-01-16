@@ -71,7 +71,27 @@ const Minting = () => {
   }
 
   return (
-    <>
+  <>
+    {isConnected ? (
+    <section className='how_section'>
+      <div className='steps'>
+          <h2 className='step_header'>1</h2>
+          <p>select either the public minting or a prepaid minting</p>
+      </div>
+      <div className='steps'>
+          <h2 className='step_header'>2</h2>
+          <p>select the number of items. Max 3 for public minting</p>
+
+      </div>
+      <div className='steps'>
+          <h2 className='step_header'>3</h2>
+          <p>Press the MINT NOW button and sign the transaction</p>
+
+      </div>
+    </section>
+    ) 
+    : <></>     
+    }
     <section className="minting-section">    
       <div className="minting-container">
       {isConnected ? (
@@ -85,7 +105,7 @@ const Minting = () => {
         </div>
       ): (
         <div className='info_box'>
-          <h1 className='get_Started_headline'>How to get started</h1>
+          <h1 className='get_Started_headline'>Please connect your wallet</h1>
           <p className='connect_wallet_text'>In order to get started you need to connect your wallet. In doing so allows us to check wether or not you are eligable for any mint. </p>
         </div>
       )}
@@ -94,7 +114,7 @@ const Minting = () => {
           {isPublicMint ? (
             <div className='info_container'>
                 <h2> Public minting</h2>
-                <p> If the public minting is open, you can mint...</p>
+                <p> If the public minting is open, you can mint.</p>
                 <button className='opt_btn' onClick={handleMintOptions}>To Prepaid Mint</button>
             </div>
           ) : (
@@ -126,8 +146,8 @@ const Minting = () => {
         ) : <></>
         }
       </div>
-
     </section>
+    
     <section className='connect_wrapper'>
       <div className='connect_box'>
         {isConnected ? (<>
@@ -141,7 +161,7 @@ const Minting = () => {
         )}
       </div>
     </section>
-    </>
+  </>
   )
 }
 
