@@ -3,8 +3,10 @@ import { ethers, BigNumber } from 'ethers';
 import React from 'react'
 import "../Styles/Minting.css"
 import AssetDispenserNfts from '../../AssetDispenserNfts.json';
+import AssetDispenserNftsPrivateCollection from '../../AssetDispenserNftsPrivateCollection.json';
 
 const AssetDispenserNftsAddress = "0x1E15676604e11574e65Ec52C7A9F12eB577CB9a6";
+const AssetDispenserNftsPrivateCollectionAddress = "0xe055f5802bDF611EE542820dc403a30D54695F5f";
 
 const Minting = () => {
   const [mintAmount, setMintAmount] = useState(1);
@@ -27,34 +29,41 @@ const Minting = () => {
   }
 
   async function handleMint(){
-    if (window.ethereum) {
-      const provider = new ethers.providers.Web3Provider(window.ethereum);
-      const signer = provider.getSigner();
-      const contract = new ethers.Contract(
-        AssetDispenserNftsAddress,
-        AssetDispenserNfts.abi,
-        signer
-      );
-      if (isPublicMint) {
-        try {
-          const response = await contract.publicMint("ipfs://QmcV9e7ujNUhW7zUWUQ8MsFcjbgtZ2F61iJC4jpqoCDrT8", BigNumber.from(mintAmount), {
-            value: ethers.utils.parseEther((0.001*mintAmount).toString())           
-          });
-          setMintSuccess(true);
-          console.log("response: ", response);
-        } catch (err) {
-          console.log("error: ", err)
-        }
-      } else {
+    if (isPublicMint) {
+      if (window.ethereum) {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+          AssetDispenserNftsAddress,
+          AssetDispenserNfts.abi,
+          signer
+        );
           try {
-          const response = await contract.prepaidMint(BigNumber.from(mintAmount), {
-            value: ethers.utils.parseEther((0.01*mintAmount).toString())           
-          });
-          setMintSuccess(true);
-          console.log("response: ", response);
-        } catch (err) {
-          console.log("error: ", err)
-        }
+            const response = await contract.publicMint("ipfs://QmcV9e7ujNUhW7zUWUQ8MsFcjbgtZ2F61iJC4jpqoCDrT8", BigNumber.from(mintAmount), {
+              value: ethers.utils.parseEther((0.001*mintAmount).toString())           
+            });
+            setMintSuccess(true);
+            console.log("response: ", response);
+          } catch (err) {
+            console.log("error: ", err)
+          }
+      };
+    } else if (!isPublicMint) {
+        if (window.ethereum) {
+        const provider = new ethers.providers.Web3Provider(window.ethereum);
+        const signer = provider.getSigner();
+        const contract = new ethers.Contract(
+          AssetDispenserNftsPrivateCollectionAddress,
+          AssetDispenserNftsPrivateCollection.abi,
+          signer
+        );
+          try {
+            const response = await contract.prepaidMint("ipfs://QmSPepqWxBATNYmWguX5oan2BbiXFWXwSgcpA8z4HY7u4Y");
+            setMintSuccess(true);
+            console.log("response: ", response);
+          } catch (err) {
+            console.log("error: ", err)
+          }
       };
     }
   }
