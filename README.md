@@ -1,13 +1,9 @@
-# Sample Hardhat Project
+This project creates a website that enables users to mint NFTs to their wallet. 
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+There are two smart contracts that handle the minting, one for private and prepaid minting targeting organizations, and one for public minting. 
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+The techstack includes:
+Hardhat
+Alchemy
+Javascript
+React
